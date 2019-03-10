@@ -6,23 +6,23 @@ public class ex02 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 
-		int x = scan.nextInt();
-		int count = 0;
-		while (x > 1) {
-			
-			if (x % 3 == 0) {
-				x /= 3;
-				count++;
-			} else if (x % 2 == 0) {
-				x /= 2;
-				count++;
-			} else {
-				x--;
-				count++;
+		int n = scan.nextInt();
+		int dp[] = new int[1000001];
+		dp[1] = 0;
+
+		for (int i = 0; i < n + 1; i++) {
+			dp[i] = dp[i - 1] + 1;
+
+			if (i % 2 == 0 && dp[i / 2] + 1 < dp[i]) {
+				dp[i] = dp[i / 2] + 1;
+			} else if (i % 3 == 0 && dp[i / 3] + 1 < dp[i]) {
+				dp[i] = dp[i / 3] + 1;
 			}
+
 		}
-		System.out.println(count);
-		
+
+		System.out.println(dp[n]);
+		scan.close();
 
 	}
 
