@@ -21,5 +21,6 @@ public class ex05 {
 			sum += temp; 
 		}
 		System.out.println(sum);
+		sc.close();
 	}
 }
