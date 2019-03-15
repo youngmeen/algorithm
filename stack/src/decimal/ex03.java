@@ -12,9 +12,6 @@ public class ex03 {
 		int count;
 		for (int j = 0; j < line.length(); j++) {
 		}
-		
 
-		
-		
 	}
 }
