@@ -14,7 +14,7 @@ public class a1978 {
 			int num2 = scan.nextInt();
 			sosuCnt = 0;			
 			for (int j = 0; j <= num2; j++) {
-				if(num2 % j ==0) {
+				if(num2 % j == 0) {
 					sosuCnt++;
 				}
 			}
