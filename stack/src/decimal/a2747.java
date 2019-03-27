@@ -5,29 +5,29 @@ import java.util.Scanner;
 public class a2747 {
 
 	public static void main(String[] args) {
-
-		Scanner scan = new Scanner(System.in);
-		int n = scan.nextInt();
-		int a = 0, b = 1;
-		if (n == 0) {
-			System.out.println(a);
-		} else if (n == 1) {
-			System.out.println(b);
-		}
-
-		for (int i = 0; i < n - 1; i++) {
-			if (b > a) {
-				a = a + b;
-			} else {
-				b = b + a;
+		
+		int a = 0;
+		int b = 1;
+		int c = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int num = sc.nextInt();
+		
+		if(num == 1) {
+			System.out.println(1);
+		}else {
+			for (int i = 1; i < num; i++) {
+				c = a + b;
+				a = b;
+				b = c;
 			}
+			System.out.println(c);
 		}
-		if (b > a) {
-			System.out.println(b);
-		} else {
-			System.out.println(a);
-		}
+
 
 	}
+	
+	
 
 }
